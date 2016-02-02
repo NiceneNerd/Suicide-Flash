@@ -73,13 +73,12 @@ if [[ $oldimg == "ADB" ]]; then
 	$oldimg="oldsys.img"
 fi
 
-if [ ! -e $oldimg ] then
+if [ ! -e $oldimg ]; then
 	echo "System image '$oldimg' is missing! Aborting."
 	exit
 fi
 
-if [ -z $newimg ]
- then
+if [ -z $newimg ]; then
 	scripts/mountimg.sh $oldimg
 	echo
 	echo "Your original system image is mounted at mnt-$oldimg. As root user, modify any files"
@@ -109,7 +108,7 @@ fi
 adb pull /dev/block/platform/msm_sdcc.1/by-name/sbl1 _tmp/sbl1.mbn
 adb pull /dev/block/platform/msm_sdcc.1/by-name/sbl2 _tmp/sbl2.mbn
 
-if [ ! -e "sbl1.mbn" ] || [ ! -e "sbl1.mbn"]; then
+if [ ! -e "_tmp/sbl1.mbn" ] || [ ! -e "_tmp/sbl1.mbn"]; then
 	echo "Bootloader images not pulled! Aborting."
 	exit
 fi
