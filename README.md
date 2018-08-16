@@ -33,7 +33,7 @@ Suicide Flash:
 
  Options:
    -h, --help      displays this help message
-   -s, --skip      skips all prompts and runs without user interaction```
+   -s, --skip      skips all prompts and runs without user interaction ```
 
 Package Maker:
 ``` Usage: pkgmaker.sh [OPTION]... ORIGINALSYSTEM TARGETDEVICE REQUIREMENTS
@@ -55,11 +55,11 @@ Package Maker:
  Options:
    -h, --help         returns this help message
    -m MODDEDSYSTEM    specifies an existing modded system image
-                      if not given, will mount original for modification```
+                      if not given, will mount original for modification ```
 
 Suicide Push:
 ``` Usage: suicidepush.sh LOCALFILE REMOTEFILE
- Uses Suicide Flash to push LOCALFILE to a phone system at REMOTEFILE.```
+ Uses Suicide Flash to push LOCALFILE to a phone system at REMOTEFILE. ```
 
 ## What Do I Need to Use It?
 * A Linux installation
