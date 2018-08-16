@@ -11,32 +11,36 @@ What is Suicide Flash? It is a collection of Bash scripts and other files which 
 
 ## Who Can Use It?
 Suicide Flash is for sure compatible with most Moto X variants. The testing has been done primarily with an XT1049, the Republic Wireless model, but has also included the XT1060 (Verizon) and should work on most/all of them. However, in theory any phone, or at least any Moto phone, using the MSM8960 chip could be compatible, such as the Droid Turbo. So to simplify:
-XT1049 (Moto X Republic Wireless): Tested and working
-XT1060 (Moto X Verizon): Tested and working
-XT1058 (Moto X AT&T): Untested, highly likely to work
-XT10XX (Any other Moto X): Untested, likely to work
-Others: Untested, may work as long as they use MSM8960
+* XT1049 (Moto X Republic Wireless): Tested and working
+* XT1060 (Moto X Verizon): Tested and working
+* XT1058 (Moto X AT&T): Untested, highly likely to work
+* XT10XX (Any other Moto X): Untested, likely to work
+* Others: Untested, may work as long as they use MSM8960
 
 ## How Do I Use It?
 Suicide Flash (SF) consists of three main scripts: a flashing script, a package creation script, and a pushing script. Details:
-suicideflash.sh: Flashes SF packages to the phone in bricked (QDLoader) mode
-pkgmaker.sh: For developers. Creates SF packages from system images.
-suicidepush.sh: Uses the SF system to "push" system files in an ADB-like way
+* suicideflash.sh: Flashes SF packages to the phone in bricked (QDLoader) mode
+* pkgmaker.sh: For developers. Creates SF packages from system images.
+* suicidepush.sh: Uses the SF system to "push" system files in an ADB-like way
+
 To use these scripts, simply extract them to a place of your convenience. All scripts must be run from the root Suicide Flash folder. Do not run any of them from within the "scripts" folder. Also, while it may not strictly be necessary, it is best (if you are developer) to include any relevant system images in the root Suicide Flash folder, as well.
 
 As an end user, you can download SF packages created by developers and flash them using the main Suicide Flash script. As a developer, you can pull system images and use them to create SF packages with the pkgmaker.sh script. Anyone can feel free to use the Suicide Push script to push files to their device. For more information, here are the help pages for each.
 
 Suicide Flash:
-``` Usage: suicideflash.sh PACKAGE
+```
+Usage: suicideflash.sh PACKAGE
  Flashes PACKAGE to the system parition of a Moto phone using Qualcomm
  emergency download mode.
 
  Options:
    -h, --help      displays this help message
-   -s, --skip      skips all prompts and runs without user interaction ```
+   -s, --skip      skips all prompts and runs without user interaction
+```
 
 Package Maker:
-``` Usage: pkgmaker.sh [OPTION]... ORIGINALSYSTEM TARGETDEVICE REQUIREMENTS
+```
+Usage: pkgmaker.sh [OPTION]... ORIGINALSYSTEM TARGETDEVICE REQUIREMENTS
    SYSTEMOFFSET OUTPUTFILE
  Creates a Suicide Flash package for writing to Moto phones via the emergency
  Qualcomm download mode.
@@ -55,11 +59,14 @@ Package Maker:
  Options:
    -h, --help         returns this help message
    -m MODDEDSYSTEM    specifies an existing modded system image
-                      if not given, will mount original for modification ```
+                      if not given, will mount original for modification
+```
 
 Suicide Push:
-``` Usage: suicidepush.sh LOCALFILE REMOTEFILE
- Uses Suicide Flash to push LOCALFILE to a phone system at REMOTEFILE. ```
+```
+Usage: suicidepush.sh LOCALFILE REMOTEFILE
+ Uses Suicide Flash to push LOCALFILE to a phone system at REMOTEFILE.
+ ```
 
 ## What Do I Need to Use It?
 * A Linux installation
